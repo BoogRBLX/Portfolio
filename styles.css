@@ -1,0 +1,218 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes expandOut {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: #008080;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.desktop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  width: 90%;
+  max-width: 600px;
+  background: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  max-height: 90%;
+  display: none;
+}
+
+.window.open-animation {
+  animation: expandOut 0.5s ease-in-out forwards;
+}
+
+.title-bar {
+  background: #00008b;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+.title-bar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #00008b, #0000cd);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.title-bar-text {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.title-bar-controls {
+  display: flex;
+  margin-right: 10px;
+}
+
+.title-bar-controls button {
+  background: #c0c0c0;
+  border: 1px solid #000;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-bar-controls button[aria-label="Minimize"]::before {
+  content: "-";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.title-bar-controls button[aria-label="Maximize"]::before {
+  content: "▢";
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.title-bar-controls button[aria-label="Close"]::before {
+  content: "×";
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.window-body {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #00008b;
+  margin: 0 0 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #000;
+  margin: 10px 0;
+}
+
+.desktop-icon {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.desktop-icon img {
+  width: 64px;
+  height: 64px;
+}
+
+.desktop-icon p {
+  color: #fff;
+  font-size: 16px;
+}
+
+.desktop-icon:hover {
+  transform: scale(1.1);
+}
+
+.works {
+  margin: 20px 0;
+}
+
+.work {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.work:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 20px;
+  color: #00008b;
+}
+
+h2 a {
+  color: #00008b;
+  text-decoration: none;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #fff;
+  background: #00008b;
+  text-decoration: none;
+  border: 1px solid #000;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+
+.social-media a:hover {
+  background: #0000cd;
+  transform: scale(1.1);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boog's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="desktop">
+    <div class="desktop-icon" ondblclick="openPortfolio()">
+      <img src="https://media.discordapp.net/attachments/1132178698825637888/1244764953034883103/Untitled402_20230909231828.png?ex=66564d33&is=6654fbb3&hm=63fd269dcee03331a026f3d8fad9e0e0c0e76a1dc654fbe3baea6b63f0751952&=&format=webp&quality=lossless&width=676&height=676" alt="App Icon">
+      <p>BoogRBLX</p>
+    </div>
+  </div>
+
+  <div id="portfolio-window" class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">Boog's Portfolio</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize" onclick="minimizePortfolio()"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close" onclick="closePortfolio()"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <h1>BoogRBLX</h1>
+      <p>Studying Business Administration</p>
+      <p>Project Management and Community Manager</p>
+
+      <div class="works">
+        <div class="work">
+          <h2><a href="https://www.roblox.com/games/13370756695/Bakery Tycoon" target="_blank">Work 1: Bakery Tycoon</a></h2>
+          <p>
+            Managed Bakery Tycoon's development, In charge of making sure things are on time
+            and adding new ideas, and making sure everyone is doing their part. 1.6M+ Visits (Project Manager).
+          </p>
+        </div>
+        <div class="work">
+          <h2><a href="https://www.roblox.com/games/11860394049/Lumber-Legends-Simulator" target="_blank">Work 2: Lumber Legend Simulator</a></h2>
+          <p>
+            Managed the Discord. Hired new staff, Made and designed Discord server, EX: Channels,
+            Information, and made it enjoyable and clean for the community. 10k+ Members (Community Manager). 
+          </p>
+        </div>
+        <div class="work">
+          <h2><a href="https://x.com/BoogRBLX" target="_blank">What I do</a></h2>
+          <p>
+            I've made a ton of Discord Servers and have a lot of experience of managing them. I manage
+            projects on roblox, I also do Graphic design on the side.
+          </p>
+        </div>
+      </div>
+
+      <div class="social-media">
+        <h2>Connect with me:</h2>
+        <a href="https://x.com/BoogRBLX" target="_blank">Twitter</a>
+        <a href="https://discord.gg/jMfTpjWxVv" target="_blank">Discord</a>
+        <a href="https://www.roblox.com/users/146250534/profile" target="_blank">Roblox</a>
+      </div>
+    </div>
+  </div>
+
+  <audio id="click-sound" src="sounds/click-sound.wav" preload="auto"></audio>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
